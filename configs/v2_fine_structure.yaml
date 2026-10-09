@@ -1,0 +1,24 @@
+# v2: native-resolution U-Net focused on fine filament structure (barbs).
+# See notebooks/02_unet_fine_structure.ipynb for the same pipeline as a single Kaggle notebook.
+
+data_root: ""            # empty -> /kaggle/input if present, else download with kagglehub
+val_frac: 0.15
+seed: 42
+
+crop: 1024
+repeats: 2
+fg_crop_prob: 0.7
+blackhat_k: 21
+
+encoder: resnet50
+batch_size: 4            # fits a 16 GB GPU (T4 / P100) with mixed precision
+epochs: 40
+lr: 0.0003
+weight_decay: 0.0001
+cldice_w: 0.5
+skel_iters: 10
+num_workers: 2
+
+tta: 8
+
+output_dir: outputs/v2_fine_structure

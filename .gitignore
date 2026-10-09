@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Data (CC BY-NC 4.0; download with scripts/download_data.py, never commit)
+data/
+MAGFiLO*/
+
+# Training outputs and weights
+outputs/
+checkpoints/
+*.pth
+*.pt
+submission*.csv
+
+# Local copies of the competition pages (organisers' text, not ours to publish)
+notes/
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.claude/
